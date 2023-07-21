@@ -3,13 +3,14 @@ import { MouseEvent, useState } from "react";
 function ListGroup() {
   let items = ["New York", "Mumbai", "Bangalore", "Helsinki", "Tokyo"];
 
-  //hook
+  //useState is a hook, but the entire line is not referred to as a hook.
+  //Instead, it's a destructuring assignment that utilizes the useState hook.
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const getMessage = () => {
     //return items.length === 0 ? <p>No items found</p> : null;
-    // a better alternative approach would be
-    return items.length === 0 && <p>No items found</p>;
+    //above code works fine but a better approach would be
+    return items.length === 0 && <p>No items found</p>; //return <p> if conditon is true
   };
 
   //an event handler
